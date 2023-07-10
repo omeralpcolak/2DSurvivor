@@ -468,6 +468,7 @@ GameObject:
   - component: {fileID: 3821958664426275183}
   - component: {fileID: 4276756293425508586}
   - component: {fileID: 3729907590761726785}
+  - component: {fileID: 3272980172395398138}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -482,7 +483,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6176331043168551479}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.02, y: -5.672, z: 0}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_ConstrainProportionsScale: 1
@@ -493,7 +494,7 @@ Transform:
   - {fileID: 2037924655191727948}
   - {fileID: 4017669522766940670}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3976812815270565992
 SpriteRenderer:
@@ -535,7 +536,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 8793639957104055765, guid: 9c447c54c8e0416e9446cadb88c48fd3,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -577,7 +578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magics:
   - {fileID: 6009042329687528171}
-  projectileCoolDown: 0.25
+  projectileCoolDown: 0.15
 --- !u!114 &7416017466678080910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -705,3 +706,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.69}
   m_Size: {x: 0.9, y: 1.35}
   m_Direction: 0
+--- !u!114 &3272980172395398138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6176331043168551479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c2818d38f5df914594feb62b23c683f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ultimateEffect: {fileID: 5925581466483414950, guid: e15c9bd14b06bd14c9a3cc9128753424,
+    type: 3}
+  ultimatePosition: {fileID: 0}

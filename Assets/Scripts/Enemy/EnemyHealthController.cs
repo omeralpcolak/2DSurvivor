@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHealthController : MonoBehaviour
 {
-    [SerializeField] int currentHealth, maxHealth;
+    public int currentHealth, maxHealth;
     public GameObject destructionEffect;
     public Transform destructionEffectPoint;
     [SerializeField] GameObject slimeParticle;
@@ -33,6 +33,8 @@ public class EnemyHealthController : MonoBehaviour
             Instantiate(destructionEffect, destructionEffectPoint.position, transform.rotation);
         }
     }
+
+    
 
     
 }

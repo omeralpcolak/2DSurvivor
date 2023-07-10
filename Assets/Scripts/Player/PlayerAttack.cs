@@ -7,12 +7,16 @@ public class PlayerAttack : MonoBehaviour
     public List<MagicBase> magics;
     [SerializeField] float projectileCoolDown;
     private bool canAttack;
+    UltimateAbility ultimateAbility;
+    
 
 
 
     private void Start()
     {
         canAttack = true;
+        ultimateAbility = GetComponent<UltimateAbility>();
+        
     }
     private void Update()
     {   
@@ -25,15 +29,21 @@ public class PlayerAttack : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.F))
             {
                 magics[0].Magic();
-                StartCoroutine(CoolDown(projectileCoolDown));
+                StartCoroutine(ProjectileCoolDown(projectileCoolDown));
             }
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                ultimateAbility.UseUltimate();
+            }
+
+           
         }
 
         
 
     }
 
-    IEnumerator CoolDown(float cooldown)
+    IEnumerator ProjectileCoolDown(float cooldown)
     {
         canAttack = false;
         yield return new WaitForSeconds(cooldown);
