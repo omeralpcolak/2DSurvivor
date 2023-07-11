@@ -378,7 +378,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Kill the enemies to use your ultimate ability!!
+  m_text: Hit the slimes to use your ultimate ability!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
@@ -812,6 +812,11 @@ PrefabInstance:
       propertyPath: ultimatePosition
       value: 
       objectReference: {fileID: 1764432206}
+    - target: {fileID: 4004257887162828567, guid: 0d623d8ee68f768439116217766cb5d2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5685022105433836894, guid: 0d623d8ee68f768439116217766cb5d2,
         type: 3}
       propertyPath: m_RootOrder
@@ -871,6 +876,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475495925769856240, guid: 0d623d8ee68f768439116217766cb5d2,
+        type: 3}
+      propertyPath: useUltimateTxt
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475495925769856240, guid: 0d623d8ee68f768439116217766cb5d2,
+        type: 3}
+      propertyPath: ultimateReadyEffect
+      value: 
+      objectReference: {fileID: 1308712207}
+    - target: {fileID: 6548706101460636312, guid: 0d623d8ee68f768439116217766cb5d2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6548706101460636312, guid: 0d623d8ee68f768439116217766cb5d2,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6548706101460636312, guid: 0d623d8ee68f768439116217766cb5d2,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1090,6 +1120,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1308712207 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4004257887162828567, guid: 0d623d8ee68f768439116217766cb5d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 794600482}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1340804537
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,7 +1453,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 401281720, guid: 6abdd78b1b70a82499c1dc6f307ebac3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

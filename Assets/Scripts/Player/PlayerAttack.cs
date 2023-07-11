@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using DG.Tweening;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -8,7 +10,9 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] float projectileCoolDown;
     private bool canAttack;
     UltimateAbility ultimateAbility;
-    
+    public int hitCount;
+    [SerializeField] int targetHitCount = 20;
+    [SerializeField] GameObject ultimateReadyEffect;
 
 
 
@@ -16,6 +20,7 @@ public class PlayerAttack : MonoBehaviour
     {
         canAttack = true;
         ultimateAbility = GetComponent<UltimateAbility>();
+        hitCount = 0;
         
     }
     private void Update()
@@ -31,9 +36,15 @@ public class PlayerAttack : MonoBehaviour
                 magics[0].Magic();
                 StartCoroutine(ProjectileCoolDown(projectileCoolDown));
             }
-            if (Input.GetKeyDown(KeyCode.R))
+            if (hitCount >= targetHitCount)
             {
-                ultimateAbility.UseUltimate();
+                ultimateReadyEffect.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.R))
+                {
+                    ultimateAbility.UseUltimate();
+                    hitCount = 0;
+                    ultimateReadyEffect.SetActive(false);
+                }
             }
 
            
@@ -49,5 +60,7 @@ public class PlayerAttack : MonoBehaviour
         yield return new WaitForSeconds(cooldown);
         canAttack = true;
     }
+    
+    
     
 }

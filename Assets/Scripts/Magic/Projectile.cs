@@ -10,6 +10,7 @@ public class Projectile : MonoBehaviour
     [SerializeField]public int projectileDamage;
     //EnemyHealthController enemyHealthController;
     bool hasHit;
+    PlayerAttack playerAttack;
 
     Shake shake;
 
@@ -23,6 +24,7 @@ public class Projectile : MonoBehaviour
     {
         //enemyHealthController = FindObjectOfType<EnemyHealthController>();
         shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
+        playerAttack = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAttack>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -30,6 +32,7 @@ public class Projectile : MonoBehaviour
         if(other.tag=="Slime" && !hasHit )
         {
             hasHit = true;
+            playerAttack.hitCount++;
             Destroy(gameObject);
             Instantiate(explosionEffect, transform.position, transform.rotation);
             other.GetComponent<EnemyHealthController>().EnemyTakeDamage(projectileDamage);
@@ -49,6 +52,7 @@ public class Projectile : MonoBehaviour
         }
     }
 
+    
 
     public void Init(bool playerFacingRight)
     {
