@@ -6,3 +6,8 @@
 
 
 ![test2](https://github.com/omeralpcolak/2DSurvivor/assets/112391850/c03d88a9-32f6-4846-aa5a-d1d820e0b2e4)
+
+
+<p>Player does not have only one ability. He also has an ultimate ability: </p>
+
+![ultimate_test](https://github.com/omeralpcolak/2DSurvivor/assets/112391850/b6b9e7e4-c390-4e73-b405-aeb49d270bb7)
