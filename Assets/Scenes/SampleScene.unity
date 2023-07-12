@@ -1770,7 +1770,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Survive Time:'
+  m_text: 'Survival Time:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3430decd19db4446aec75dbd6075494, type: 2}
   m_sharedMaterial: {fileID: 1485224842178764788, guid: e3430decd19db4446aec75dbd6075494,

@@ -9934,6 +9934,7 @@ GameObject:
   - component: {fileID: 2459341048406280669}
   - component: {fileID: 7715667339611204483}
   - component: {fileID: 7552013912374592175}
+  - component: {fileID: -7811634780231543759}
   m_Layer: 0
   m_Name: BoomTxt
   m_TagString: Untagged
@@ -14916,6 +14917,19 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &-7811634780231543759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4771256990914848161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e964dd4021980fe4e93ed2015139c79b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectTime: 0.5
 --- !u!1 &4876208260019921217
 GameObject:
   m_ObjectHideFlags: 0

@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
     private void UpdateSurviveTime()
     {
         surviveTime += Time.deltaTime;
-        surviveTimeTxt.text = "Survive Time: " + surviveTime.ToString("0");
+        surviveTimeTxt.text = "Survival Time: " + surviveTime.ToString("0");
     }
 
     private void SpawnCooldownController()
