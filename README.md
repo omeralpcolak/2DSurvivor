@@ -13,4 +13,4 @@
 ![ultimate_test](https://github.com/omeralpcolak/2DSurvivor/assets/112391850/b6b9e7e4-c390-4e73-b405-aeb49d270bb7)
 
 
-![ultimate_ability_effect](https://github.com/omeralpcolak/2DSurvivor/assets/112391850/73314c7e-f9f8-4d9e-9646-1f6e88a6bbe0)
+![ultimate_ability_effect_test](https://github.com/omeralpcolak/2DSurvivor/assets/112391850/144524ed-87e0-4289-b7c2-4835ca5aa56c)
