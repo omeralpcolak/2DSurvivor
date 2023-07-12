@@ -8,6 +8,9 @@ public class EnemyHealthController : MonoBehaviour
     public GameObject destructionEffect;
     public Transform destructionEffectPoint;
     [SerializeField] GameObject slimeParticle;
+    [SerializeField] GameObject boomTxtPrefab;
+    [SerializeField] Transform boomTxtPos;
+    GameManager gameManager;
 
 
 
@@ -17,8 +20,8 @@ public class EnemyHealthController : MonoBehaviour
     }
 
     private void Start()
-    {   
-     
+    {
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         
     }
 
@@ -28,13 +31,19 @@ public class EnemyHealthController : MonoBehaviour
         Instantiate(slimeParticle, transform.position, transform.rotation,transform);
         if (currentHealth <= 0)
         {
-            currentHealth = 0;
-            Destroy(gameObject);
-            Instantiate(destructionEffect, destructionEffectPoint.position, transform.rotation);
+            StartCoroutine(EnemyDie());
         }
     }
 
-    
-
+    IEnumerator EnemyDie()
+    {
+        currentHealth = 0;
+        Instantiate(boomTxtPrefab, boomTxtPos.position, Quaternion.identity);
+        yield return new WaitForSeconds(.2f);
+        gameManager.killCount++;
+        Destroy(gameObject);
+        Instantiate(destructionEffect, destructionEffectPoint.position, transform.rotation);
+    }
+   
     
 }

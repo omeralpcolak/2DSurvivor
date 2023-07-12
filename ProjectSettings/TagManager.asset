@@ -8,6 +8,8 @@ TagManager:
   - Slime
   - Projectile
   - ScreenShake
+  - FxTemporaire
+  - GameManager
   layers:
   - Default
   - TransparentFX

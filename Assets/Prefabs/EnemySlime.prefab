@@ -36,6 +36,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7818498916355491505}
+  - {fileID: 7047293193666188174}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -220,6 +221,40 @@ MonoBehaviour:
   destructionEffectPoint: {fileID: 7818498916355491505}
   slimeParticle: {fileID: 3440540326866527060, guid: db3746148b46b7e4fb2efdd6488d1095,
     type: 3}
+  boomTxtPrefab: {fileID: 4771256990914848161, guid: 3c2839930e00ba9449ab0a0d00d581d8,
+    type: 3}
+  boomTxtPos: {fileID: 7047293193666188174}
+--- !u!1 &8753902776479165720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7047293193666188174}
+  m_Layer: 0
+  m_Name: BoomTxtPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7047293193666188174
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8753902776479165720}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.038, y: 0.142, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8610286093479604091}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8903720055337453667
 GameObject:
   m_ObjectHideFlags: 0

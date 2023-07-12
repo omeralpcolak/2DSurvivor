@@ -28,11 +28,11 @@ public class UltimateAbility : MonoBehaviour
     public IEnumerator ActivateUltimate()
     {
         playerMovement.canItMove = false;
-        transform.DOMoveY(ultimatePosition.position.y,1);
-        yield return new WaitForSeconds(1f);
+        transform.DOMoveY(ultimatePosition.position.y,0.8f);
+        yield return new WaitForSeconds(0.8f);
         playerMovement.canItMove = true;
         Instantiate(ultimateEffect, transform.position, transform.rotation);
-        yield return new WaitForSeconds(0.20f);
+        yield return new WaitForSeconds(0.2f);
         shake.UltimaShake();
         GameObject[] slimes = GameObject.FindGameObjectsWithTag("Slime");
 

@@ -121,13 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 15
-  slimePrefab: {fileID: 8631884665244050419, guid: 903052592e10a75469e9d5c6f6864a15,
-    type: 3}
-  damageTextPrefab: {fileID: 7095142758115802347, guid: 4c6207ee5dc0485438a17cbc82b431d6,
-    type: 3}
-  explosionEffect: {fileID: 2985268419056122096, guid: 7a8b13f767f579d4fb571c572af254f6,
-    type: 3}
-  slimeParticle: {fileID: 3440540326866527060, guid: db3746148b46b7e4fb2efdd6488d1095,
+  explosionEffect: {fileID: 2165427505320887400, guid: 0704693276a11554c906b428fb7bdc85,
     type: 3}
   projectileDamage: 2
 --- !u!58 &261855272799149154
