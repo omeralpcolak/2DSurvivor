@@ -8,6 +8,6 @@
 ![test2](https://github.com/omeralpcolak/2DSurvivor/assets/112391850/c03d88a9-32f6-4846-aa5a-d1d820e0b2e4)
 
 
-<p>Player does not have only one ability. He also has an ultimate ability: </p>
+<p>Player has an ultimate ability. Also some effects are added to improve the gameplay experience </p>
 
-![ultimate_ability_effect_test](https://github.com/omeralpcolak/2DSurvivor/assets/112391850/144524ed-87e0-4289-b7c2-4835ca5aa56c)
+![ultimate_test (2)](https://github.com/omeralpcolak/2DSurvivor/assets/112391850/e1fa351d-7ebb-4d61-84eb-53160c2e933e)
