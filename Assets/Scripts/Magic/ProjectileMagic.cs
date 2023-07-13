@@ -13,5 +13,6 @@ public class ProjectileMagic : MagicBase
         Projectile projectile = Instantiate(projectilePrefab, projectileSpawnPoint.transform.position, projectileSpawnPoint.transform.rotation);
         projectile.Init(playerMovement.playerFacingRight);
         
+        
     }
 }

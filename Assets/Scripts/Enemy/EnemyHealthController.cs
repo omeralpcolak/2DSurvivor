@@ -28,7 +28,9 @@ public class EnemyHealthController : MonoBehaviour
     public void EnemyTakeDamage(int damage)
     {
         currentHealth -= damage;
+        Instantiate(boomTxtPrefab, boomTxtPos.position, Quaternion.identity);
         Instantiate(slimeParticle, transform.position, transform.rotation,transform);
+        SoundManager.instance.PlayTheSoundEffect(7);
         if (currentHealth <= 0)
         {
             StartCoroutine(EnemyDie());
@@ -42,6 +44,7 @@ public class EnemyHealthController : MonoBehaviour
         yield return new WaitForSeconds(.2f);
         gameManager.killCount++;
         Destroy(gameObject);
+        SoundManager.instance.PlayTheSoundEffect(6);
         Instantiate(destructionEffect, destructionEffectPoint.position, transform.rotation);
     }
    

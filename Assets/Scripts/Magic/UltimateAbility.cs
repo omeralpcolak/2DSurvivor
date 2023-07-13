@@ -32,6 +32,7 @@ public class UltimateAbility : MonoBehaviour
         yield return new WaitForSeconds(0.8f);
         playerMovement.canItMove = true;
         Instantiate(ultimateEffect, transform.position, transform.rotation);
+        SoundManager.instance.PlayTheSoundEffect(3);
         yield return new WaitForSeconds(0.2f);
         shake.UltimaShake();
         GameObject[] slimes = GameObject.FindGameObjectsWithTag("Slime");

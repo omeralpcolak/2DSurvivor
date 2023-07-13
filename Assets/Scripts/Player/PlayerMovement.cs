@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float playerMovementSpeed;
     [HideInInspector] public bool playerFacingRight;
     public bool canItMove;
-    private bool isHitted;
+    
     
 
     private void Start() 
@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
         rbody = GetComponent<Rigidbody2D>();
         anim =  GetComponent<Animator>();
         canItMove = true;
-        isHitted = false;
+        
     }
 
     
@@ -47,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
             Flip();
         }
         anim.SetFloat("movementSpeed",Mathf.Abs(rbody.velocity.x));
+        
     }
 
     public void Flip()
@@ -60,13 +61,5 @@ public class PlayerMovement : MonoBehaviour
         rbody.velocity = new Vector2 (0f,0f);
     }
 
-    public IEnumerator HitAnimation()
-    {
-        yield return null;
-        isHitted = true;
-        anim.SetBool("isHitted", isHitted);
-        yield return new WaitForSeconds(.22f);
-        isHitted = false;
-        anim.SetBool("isHitted", isHitted);
-    }
+    
 }

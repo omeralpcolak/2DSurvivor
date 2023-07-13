@@ -34,11 +34,13 @@ public class PlayerAttack : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.F))
             {
                 magics[0].Magic();
+                SoundManager.instance.PlayTheSoundEffect(2);
                 StartCoroutine(ProjectileCoolDown(projectileCoolDown));
             }
             if (hitCount >= targetHitCount)
             {
                 ultimateReadyEffect.SetActive(true);
+                SoundManager.instance.PlayTheSoundEffectOnce(4);
                 if (Input.GetKeyDown(KeyCode.R))
                 {
                     ultimateAbility.UseUltimate();

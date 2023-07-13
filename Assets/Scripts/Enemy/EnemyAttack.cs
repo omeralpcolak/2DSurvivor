@@ -9,12 +9,10 @@ public class EnemyAttack : MonoBehaviour
     bool canAttack;
     bool isHitted;
     PlayerHealthController playerHealthController;
-    PlayerMovement playerMovement;
 
     private void Start() 
     {
         playerHealthController = FindObjectOfType<PlayerHealthController>();
-        playerMovement = FindObjectOfType<PlayerMovement>();
         canAttack = false;
         isHitted = false;
         enemyAnim = GetComponent<Animator>();   
@@ -26,7 +24,7 @@ public class EnemyAttack : MonoBehaviour
         {
             playerHealthController.TakeDamage(enemyDamage);
             StartCoroutine(EnemyAttackRoutine());
-            StartCoroutine(playerMovement.HitAnimation());
+            
         }
 
         if (other.tag == "Projectile")
