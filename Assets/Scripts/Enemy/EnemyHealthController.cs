@@ -11,6 +11,7 @@ public class EnemyHealthController : MonoBehaviour
     [SerializeField] GameObject boomTxtPrefab;
     [SerializeField] Transform boomTxtPos;
     GameManager gameManager;
+    LevelXPManager levelXPManager;
 
 
 
@@ -22,7 +23,7 @@ public class EnemyHealthController : MonoBehaviour
     private void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-        
+        levelXPManager = GameObject.FindGameObjectWithTag("LevelXPManager").GetComponent<LevelXPManager>();
     }
 
     public void EnemyTakeDamage(int damage)
@@ -41,11 +42,16 @@ public class EnemyHealthController : MonoBehaviour
     {
         currentHealth = 0;
         Instantiate(boomTxtPrefab, boomTxtPos.position, Quaternion.identity);
-        yield return new WaitForSeconds(.2f);
+        yield return new WaitForSeconds(0f);
         gameManager.killCount++;
-        Destroy(gameObject);
-        SoundManager.instance.PlayTheSoundEffect(6);
         Instantiate(destructionEffect, destructionEffectPoint.position, transform.rotation);
+        SoundManager.instance.PlayTheSoundEffect(6);
+        levelXPManager.XPSpawner(transform);
+        levelXPManager.canXpCreated = false;
+        DestroyImmediate(gameObject);
+        levelXPManager.canXpCreated = true;
+        
+        
     }
    
     

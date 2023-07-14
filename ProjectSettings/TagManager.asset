@@ -10,6 +10,7 @@ TagManager:
   - ScreenShake
   - FxTemporaire
   - GameManager
+  - LevelXPManager
   layers:
   - Default
   - TransparentFX
