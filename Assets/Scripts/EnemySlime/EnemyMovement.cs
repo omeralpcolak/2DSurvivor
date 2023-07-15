@@ -33,7 +33,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (enemyRB.velocity.x > 0)
         {
-            transform.localScale = new Vector3 (localScale.x, localScale.y, localScale.z);
+            transform.localScale = new Vector3 (+localScale.x, localScale.y, localScale.z);
         }
         else if (enemyRB.velocity.x <0)
         {

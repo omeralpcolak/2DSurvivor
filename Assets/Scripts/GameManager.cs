@@ -9,9 +9,12 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public GameObject slimePrefab;
+    public GameObject flyEnemyPrefab;
     public GameObject portal;
     public Transform spawnpoint1, spawnpoint2;
-    [SerializeField] float spawnCooldown;
+    public Transform flyEnemySpawnPoint;
+    [SerializeField] float slimeSpawnCooldown;
+    [SerializeField] float flyEnemySpawnCooldown;
     [SerializeField] TMP_Text ultimateInfoTxt;
     [SerializeField] TMP_Text killCountTxt;
     [SerializeField] TMP_Text surviveTimeTxt;
@@ -23,6 +26,7 @@ public class GameManager : MonoBehaviour
     {
         StartCoroutine(UltimateAbilityInfoText());
         StartCoroutine(SlimeSpawner());
+        StartCoroutine(FlyEnemySpawner());
         killCount = 0;
         surviveTime = 0;
         targetSurviveTime = 30f;
@@ -40,12 +44,19 @@ public class GameManager : MonoBehaviour
         PortalSpawner(spawnpoint1);
         yield return new WaitForSeconds(.2f);
         Instantiate(slimePrefab, spawnpoint1.position, spawnpoint1.rotation);
-        yield return new WaitForSeconds(spawnCooldown);
+        yield return new WaitForSeconds(slimeSpawnCooldown);
         PortalSpawner(spawnpoint2);
         yield return new WaitForSeconds(.2f);
         Instantiate(slimePrefab, spawnpoint2.position, spawnpoint2.rotation);
-        yield return new WaitForSeconds(spawnCooldown);
+        yield return new WaitForSeconds(slimeSpawnCooldown);
         StartCoroutine(SlimeSpawner());
+    }
+
+    IEnumerator FlyEnemySpawner()
+    {   
+        Instantiate(flyEnemyPrefab, flyEnemySpawnPoint.position, flyEnemySpawnPoint.rotation);
+        yield return new WaitForSeconds(flyEnemySpawnCooldown);
+        StartCoroutine(FlyEnemySpawner());
     }
 
     void PortalSpawner(Transform spawnPoint)
@@ -75,7 +86,7 @@ public class GameManager : MonoBehaviour
     {
         if(surviveTime >= targetSurviveTime)
         {
-            spawnCooldown *= 0.8f;
+            slimeSpawnCooldown *= 0.8f;
             targetSurviveTime *= 2;
         }
     }

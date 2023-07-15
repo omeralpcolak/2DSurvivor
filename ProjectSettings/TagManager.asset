@@ -11,6 +11,8 @@ TagManager:
   - FxTemporaire
   - GameManager
   - LevelXPManager
+  - FlyEnemy
+  - Ground
   layers:
   - Default
   - TransparentFX
