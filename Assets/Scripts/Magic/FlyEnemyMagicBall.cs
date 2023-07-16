@@ -6,12 +6,13 @@ public class FlyEnemyMagicBall : MonoBehaviour
 {
     [SerializeField] float magicBallSpeed;
     [SerializeField] int magicBallDamage;
-    
+    [SerializeField] GameObject effectPrefab;
+    Shake shake;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
     }
 
     // Update is called once per frame
@@ -27,19 +28,26 @@ public class FlyEnemyMagicBall : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Ground")
-        {
-            //add Effect
-            Destroy(gameObject);
-        }
 
-        if (other.gameObject.CompareTag("Player"))
+
+        if (other.tag == "Player")
         {
-            //add Effect
+            Instantiate(effectPrefab, transform.position, transform.rotation);
             SoundManager.instance.PlayTheSoundEffect(9);
+            shake.CamShake();
             other.GetComponent<PlayerHealthController>().TakeDamage(magicBallDamage);
             Destroy(gameObject);
         }
+
+        if (other.tag == "Ground")
+        {
+            shake.CamShake();
+            Instantiate(effectPrefab, transform.position, transform.rotation);
+            Destroy(gameObject);
+            
+        }
+
+       
     }
 
     

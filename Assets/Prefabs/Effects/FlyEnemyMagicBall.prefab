@@ -43,8 +43,8 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.57327634, g: 0.29867256, b: 1, a: 1}
-  m_Intensity: 3.0456872
+  m_Color: {r: 0.56696105, g: 0.2997049, b: 1, a: 1}
+  m_Intensity: 2.9256852
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -106,11 +106,9 @@ GameObject:
   - component: {fileID: 923673775783745881}
   - component: {fileID: 3438229279326009780}
   - component: {fileID: 4159391315669002763}
-  - component: {fileID: 981104319287371899}
-  - component: {fileID: 1715271682573471285}
   m_Layer: 0
   m_Name: FlyEnemyMagicBall
-  m_TagString: Untagged
+  m_TagString: FlyEnemyMagicBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,13 +122,13 @@ Transform:
   m_GameObject: {fileID: 2880671163445003941}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.48, y: 0.48, z: 0.48}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1014137215802610737}
   - {fileID: 332771475855076314}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &923673775783745881
 ParticleSystem:
@@ -4994,55 +4992,6 @@ MonoBehaviour:
     perlinColor: 1
     perlinColorSpeed: 3
   fadeOutReference: {fileID: 923673775783745881}
---- !u!58 &981104319287371899
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2880671163445003941}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.02365917, y: -0.023002446}
-  serializedVersion: 2
-  m_Radius: 0.9
---- !u!114 &1715271682573471285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2880671163445003941}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd0139c7504ff2043bce3df90691008a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  magicBallSpeed: 10
-  magicBallDamage: 3
 --- !u!1 &9163601215291978246
 GameObject:
   m_ObjectHideFlags: 0

@@ -249,7 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c9e1cfaba5d0546ba62640fdbd0e17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flyEnemyMagicBall: {fileID: 2880671163445003941, guid: b39c745669ee5fe49a1912eb8a06cbe6,
+  flyEnemyMagicBall: {fileID: 8972037683563496143, guid: 2a6286c3ee49d724aac0dfd634a4481a,
     type: 3}
   instantiateTimer: 1
 --- !u!114 &1053254919521619059

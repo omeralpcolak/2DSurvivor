@@ -13,6 +13,8 @@ TagManager:
   - LevelXPManager
   - FlyEnemy
   - Ground
+  - GroundCheck
+  - FlyEnemyMagicBall
   layers:
   - Default
   - TransparentFX
