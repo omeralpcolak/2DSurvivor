@@ -34,9 +34,10 @@ public class FlyEnemyMagicBall : MonoBehaviour
         }
 
         if (other.gameObject.CompareTag("Player"))
-        {   
+        {
             //add Effect
-            //player take damage
+            SoundManager.instance.PlayTheSoundEffect(9);
+            other.GetComponent<PlayerHealthController>().TakeDamage(magicBallDamage);
             Destroy(gameObject);
         }
     }

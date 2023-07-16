@@ -36,11 +36,17 @@ public class UltimateAbility : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         shake.UltimaShake();
         GameObject[] slimes = GameObject.FindGameObjectsWithTag("Slime");
+        GameObject[] flyEnemies = GameObject.FindGameObjectsWithTag("FlyEnemy");
 
         foreach (GameObject slime in slimes)
         {   
             
             slime.GetComponent<EnemyHealthController>().EnemyTakeDamage(ultimateDamage);
+        }
+
+        foreach (GameObject flyEnemy in flyEnemies)
+        {
+            flyEnemy.GetComponent<FlyEnemyHealthController>().FlyEnemyTakeDamage(ultimateDamage);
         }
     }
 }

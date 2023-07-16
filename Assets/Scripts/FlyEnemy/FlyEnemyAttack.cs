@@ -15,6 +15,7 @@ public class FlyEnemyAttack : MonoBehaviour
         if (instantiateTimer <=0)
         {
             Instantiate(flyEnemyMagicBall,transform.position,transform.rotation);
+            
 
             instantiateTimer = 1f;
         }

@@ -43,8 +43,8 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.4613967, g: 0.3169615, b: 1, a: 1}
-  m_Intensity: 2.9314663
+  m_Color: {r: 0.57327634, g: 0.29867256, b: 1, a: 1}
+  m_Intensity: 3.0456872
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -5042,7 +5042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magicBallSpeed: 10
-  magicBallDamage: 0
+  magicBallDamage: 3
 --- !u!1 &9163601215291978246
 GameObject:
   m_ObjectHideFlags: 0

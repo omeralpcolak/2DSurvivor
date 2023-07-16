@@ -7,7 +7,7 @@ public class Healthbar : MonoBehaviour
 {
 
     [SerializeField] private Image healthbarSprite;
-    [SerializeField] private float reduceSpeed = 2;
+    [SerializeField] private float reduceSpeed = .5f;
     private float target = 1;
     public void UpdateHealthBar(float maxHealth, float currentHealth)
     {

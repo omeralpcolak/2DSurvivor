@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
         StartCoroutine(UltimateAbilityInfoText());
         StartCoroutine(SlimeSpawner());
         StartCoroutine(FlyEnemySpawner());
+
         killCount = 0;
         surviveTime = 0;
         targetSurviveTime = 30f;
@@ -36,7 +37,8 @@ public class GameManager : MonoBehaviour
     {
         UpdateKillCount();
         UpdateSurviveTime();
-        SpawnCooldownController();
+        SlimeSpawnCooldownController();
+        
     }
 
     IEnumerator SlimeSpawner()
@@ -53,10 +55,26 @@ public class GameManager : MonoBehaviour
     }
 
     IEnumerator FlyEnemySpawner()
-    {   
-        Instantiate(flyEnemyPrefab, flyEnemySpawnPoint.position, flyEnemySpawnPoint.rotation);
-        yield return new WaitForSeconds(flyEnemySpawnCooldown);
-        StartCoroutine(FlyEnemySpawner());
+    {
+        float threshold = 30f;
+
+        while (true)
+        {
+            if (surviveTime >= threshold)
+            {
+                GameObject[] existingEnemies = GameObject.FindGameObjectsWithTag("FlyEnemy");
+
+                if (existingEnemies.Length == 0)
+                {
+                    Instantiate(flyEnemyPrefab, flyEnemySpawnPoint.position, flyEnemySpawnPoint.rotation);
+                }
+
+               
+            }
+
+            yield return null;
+        }
+
     }
 
     void PortalSpawner(Transform spawnPoint)
@@ -82,7 +100,7 @@ public class GameManager : MonoBehaviour
         surviveTimeTxt.text = "Survival Time: " + surviveTime.ToString("0");
     }
 
-    private void SpawnCooldownController()
+    private void SlimeSpawnCooldownController()
     {
         if(surviveTime >= targetSurviveTime)
         {

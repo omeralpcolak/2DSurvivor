@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1128420783556149137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6728116175166986546}
+  m_Layer: 0
+  m_Name: EffectTxtPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6728116175166986546
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128420783556149137}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.198, y: 1.303, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8905825572024108247}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3481116099140459602
 GameObject:
   m_ObjectHideFlags: 0
@@ -98,6 +129,7 @@ GameObject:
   - component: {fileID: 1777180180745714568}
   - component: {fileID: 401592722126515900}
   - component: {fileID: 1053254919521619059}
+  - component: {fileID: 2296682910987430012}
   m_Layer: 0
   m_Name: FlyEnemy
   m_TagString: FlyEnemy
@@ -118,6 +150,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 811687713429610794}
+  - {fileID: 6728116175166986546}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -234,6 +267,27 @@ MonoBehaviour:
   enemySpeed: 10
   yPos: {fileID: 6792762903211111206, guid: c45f190c1590bd041a4cb81ec31c3af7, type: 3}
   player: {fileID: 6176331043168551479, guid: 0d623d8ee68f768439116217766cb5d2, type: 3}
+--- !u!114 &2296682910987430012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5877393312319278066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06af6b41cdc77ef4a99f200432987ebc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flyEnemyCurrentHealth: 0
+  flyEnemyMaxHealth: 10
+  deathEffect: {fileID: 8970230460524208930, guid: 9da5342cbd8ba144b9a8e20f73a85396,
+    type: 3}
+  getHitEffect: {fileID: 3050034498007332290, guid: c6a2285111122414293ab8f63ce24711,
+    type: 3}
+  effectTxtPrefab: {fileID: 1984688874032411493, guid: 0faa030b8bb96a84382ea153bfdc9078,
+    type: 3}
+  effectTxtPrefabPos: {fileID: 6728116175166986546}
 --- !u!1 &6437503889957978660
 GameObject:
   m_ObjectHideFlags: 0
