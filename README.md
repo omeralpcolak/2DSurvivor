@@ -17,3 +17,8 @@
 
 
 ![xp_bar](https://github.com/omeralpcolak/2DSurvivor/assets/112391850/ae94a5bb-62b9-43c6-ad4e-c53cae9727a0)
+
+<p>A new flying enemy was created for advancing the experience of the gameplay. Also death animation of the player was added to the game.</p>
+
+
+![Untitled video - Made with Clipchamp (12)](https://github.com/omeralpcolak/2DSurvivor/assets/112391850/d4c86e05-4623-4ce8-860b-f9f6adb740df)
