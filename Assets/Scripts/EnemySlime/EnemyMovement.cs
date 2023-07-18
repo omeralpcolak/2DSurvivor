@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
@@ -18,8 +19,16 @@ public class EnemyMovement : MonoBehaviour
     }
 
     private void Update() 
-    {
-        Movement();
+    {   
+        if (GameManager.instance.gameStart)
+        {
+            Movement();
+        }
+        else
+        {
+            EnemyStopMovement();
+        }
+        
     }
 
     private void Movement()
@@ -39,6 +48,11 @@ public class EnemyMovement : MonoBehaviour
         {
             transform.localScale = new Vector3 (-localScale.x, localScale.y, localScale.z);
         }
+    }
+
+    private void EnemyStopMovement()
+    {
+        enemyRB.velocity = new Vector2(0, 0);
     }
 
 }

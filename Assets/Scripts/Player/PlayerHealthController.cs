@@ -11,6 +11,7 @@ public class PlayerHealthController : MonoBehaviour
     [SerializeField]private float currentHealth = 10;
     [SerializeField] private Healthbar healthbar;
     [SerializeField] GameObject boingTxtPrefab;
+    [SerializeField] GameObject playerDeathEffect;
     Shake shake;
     public float invincibilityTime;
     float invincibilityTimer;
@@ -50,8 +51,11 @@ public class PlayerHealthController : MonoBehaviour
             StartCoroutine(HitAnimation());
             if (currentHealth <= 0)
             {
+                GameManager.instance.gameStart = false;
+                StartCoroutine(HitAnimation());
                 currentHealth = 0;
-                // Destory the player and Die Animation
+                Instantiate(playerDeathEffect, transform.position, transform.rotation);
+                Destroy(gameObject);
             }
             else
             {

@@ -22,7 +22,17 @@ public class FlyEnemyMovement : MonoBehaviour
 
     private void Update()
     {
-        Movement();
+        if (GameManager.instance.gameStart)
+        {
+            Movement();
+        }
+        else
+        {
+            StopFlyEnemyMovement();
+        }
+
+        
+
     }
 
     private void Movement()
@@ -42,6 +52,11 @@ public class FlyEnemyMovement : MonoBehaviour
         {
             transform.localScale = new Vector3(-localScale.x, localScale.y, localScale.z);
         }
+    }
+
+    private void StopFlyEnemyMovement()
+    {
+        enemyRB.velocity = new Vector2(0, 0);
     }
 
 }

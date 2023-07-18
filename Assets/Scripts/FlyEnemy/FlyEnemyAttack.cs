@@ -10,14 +10,18 @@ public class FlyEnemyAttack : MonoBehaviour
     public float instantiateTimer = 1f;
 
     private void FixedUpdate()
-    {
-        instantiateTimer -= Time.deltaTime;
-        if (instantiateTimer <=0)
+    {   
+        if (GameManager.instance.gameStart)
         {
-            Instantiate(flyEnemyMagicBall,transform.position,transform.rotation);
-            
+            instantiateTimer -= Time.deltaTime;
+            if (instantiateTimer <= 0)
+            {
+                Instantiate(flyEnemyMagicBall, transform.position, transform.rotation);
 
-            instantiateTimer = 1f;
+
+                instantiateTimer = 1f;
+            }
         }
+        
     }
 }

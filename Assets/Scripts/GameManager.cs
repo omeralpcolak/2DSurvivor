@@ -5,9 +5,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
+using JetBrains.Annotations;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
     public GameObject slimePrefab;
     public GameObject flyEnemyPrefab;
     public GameObject portal;
@@ -21,23 +23,42 @@ public class GameManager : MonoBehaviour
     public int killCount;
     public float surviveTime;
     public float targetSurviveTime;
+    public bool gameStart;
 
-    private void Start()
+
+    private void Awake()
     {
-        StartCoroutine(UltimateAbilityInfoText());
-        StartCoroutine(SlimeSpawner());
-        StartCoroutine(FlyEnemySpawner());
+        instance = this;
+        gameStart = true;
+    }
+    private void Start()
+    {   
+        if(gameStart)
+        {
+            StartCoroutine(UltimateAbilityInfoText());
+            StartCoroutine(SlimeSpawner());
+            StartCoroutine(FlyEnemySpawner());
 
-        killCount = 0;
-        surviveTime = 20f;
-        targetSurviveTime = 30f;
+            killCount = 0;
+            surviveTime = 20f;
+            targetSurviveTime = 30f;
+        }
+        else
+        {
+            return;
+        }
+        
     }
 
     private void Update()
     {
-        UpdateKillCount();
-        UpdateSurviveTime();
-        SlimeSpawnCooldownController();
+        if(gameStart)
+        {
+            UpdateKillCount();
+            UpdateSurviveTime();
+            SlimeSpawnCooldownController();
+        }
+        
         
     }
 
