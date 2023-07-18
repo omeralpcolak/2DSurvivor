@@ -20,6 +20,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] TMP_Text ultimateInfoTxt;
     [SerializeField] TMP_Text killCountTxt;
     [SerializeField] TMP_Text surviveTimeTxt;
+    [SerializeField] TMP_Text gameOverTxt;
+    [SerializeField] TMP_Text finalKillCountTxt;
+    [SerializeField] TMP_Text finalSurvivorTimeTxt;
+    [SerializeField] Image fadeScreen;
     public int killCount;
     public float surviveTime;
     public float targetSurviveTime;
@@ -43,10 +47,7 @@ public class GameManager : MonoBehaviour
             surviveTime = 20f;
             targetSurviveTime = 30f;
         }
-        else
-        {
-            return;
-        }
+        
         
     }
 
@@ -58,6 +59,13 @@ public class GameManager : MonoBehaviour
             UpdateSurviveTime();
             SlimeSpawnCooldownController();
         }
+
+        if(!gameStart)
+        {
+            StartCoroutine(GameOverScene());
+        }
+
+        
         
         
     }
@@ -128,5 +136,21 @@ public class GameManager : MonoBehaviour
             slimeSpawnCooldown *= 0.8f;
             targetSurviveTime *= 2;
         }
+    }
+
+    
+     
+    public IEnumerator GameOverScene()
+    {
+        fadeScreen.GetComponent<CanvasGroup>().DOFade(1, 3f);
+        yield return new WaitForSeconds(1);
+        gameOverTxt.GetComponent<CanvasGroup>().DOFade(1, 1.5f);
+        yield return new WaitForSeconds(1);
+        finalKillCountTxt.text = "Kill Count: " + killCount.ToString();
+        finalKillCountTxt.GetComponent<CanvasGroup>().DOFade(1, 1.5f);
+        yield return new WaitForSeconds(1);
+        finalSurvivorTimeTxt.text = "Survive Time: " + surviveTime.ToString("0");
+        finalSurvivorTimeTxt.GetComponent<CanvasGroup>().DOFade(1, 1.5f);
+
     }
 }
