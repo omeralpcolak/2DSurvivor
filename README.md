@@ -22,3 +22,8 @@
 
 
 ![Untitled video - Made with Clipchamp (12)](https://github.com/omeralpcolak/2DSurvivor/assets/112391850/d4c86e05-4623-4ce8-860b-f9f6adb740df)
+
+
+<p>Main Menu:</p>
+
+![Untitled video - Made with Clipchamp (13)](https://github.com/omeralpcolak/2DSurvivor/assets/112391850/95ce9179-e421-4ca3-8bc3-abe44d870f9e)
