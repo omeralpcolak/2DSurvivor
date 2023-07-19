@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
             StartCoroutine(FlyEnemySpawner());
 
             killCount = 0;
-            surviveTime = 20f;
+            surviveTime = 0f;
             targetSurviveTime = 30f;
         }
         
