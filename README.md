@@ -2,7 +2,7 @@
  
 <p>In this project, i aimed to improve myself on juiciness concept. Here is the prototype of my 2D game: </p>
 
-# Example Gameplay
+<p>Gameplay:</p>
 
 ![Untitled video - Made with Clipchamp (12)](https://github.com/omeralpcolak/2DSurvivor/assets/112391850/d4c86e05-4623-4ce8-860b-f9f6adb740df)
 
